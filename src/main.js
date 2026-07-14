@@ -37,38 +37,38 @@ const SERVICES = [
 
 const PORTFOLIO_ITEMS = [
   // Exterior Designs
-  { src: '/src/assets/portfolio/exterior/house_exterior0.webp',     title: 'Modern Double Story', category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_exterior_11.webp',   title: 'Contemporary Residence',    category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_exterior_22.webp',   title: 'Facade with Lawn',          category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_exterior_33.webp',   title: 'Villa Elevation',           category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_exterior_44.webp',   title: 'Corner Plot Design',        category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_1_exterior_01.webp', title: 'House 1 – Front View',      category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_1_exterior_02.webp', title: 'House 1 – Side View',       category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_1_exterior_03.webp', title: 'House 1 – Evening Render',  category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_1_exterior_04.webp', title: 'House 1 – Street View',     category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_2_exterior_01.webp', title: 'House 2 – Main Elevation',  category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_2_exterior_02.webp', title: 'House 2 – Gate View',       category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_3_exterior_01.webp', title: 'House 3 – Front',           category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_3_exterior_02.webp', title: 'House 3 – Side',            category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_4_exterior_01.webp', title: 'House 4 – Elevation A',     category: 'exterior', tag: 'Exterior Design' },
-  { src: '/src/assets/portfolio/exterior/house_4_exterior_02.webp', title: 'House 4 – Elevation B',     category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_exterior0.webp',     title: 'Modern Double Story',       category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_exterior_11.webp',   title: 'Contemporary Residence',    category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_exterior_22.webp',   title: 'Facade with Lawn',          category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_exterior_33.webp',   title: 'Villa Elevation',           category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_exterior_44.webp',   title: 'Corner Plot Design',        category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_1_exterior_01.webp', title: 'House 1 – Front View',      category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_1_exterior_02.webp', title: 'House 1 – Side View',       category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_1_exterior_03.webp', title: 'House 1 – Evening Render',  category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_1_exterior_04.webp', title: 'House 1 – Street View',     category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_2_exterior_01.webp', title: 'House 2 – Main Elevation',  category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_2_exterior_02.webp', title: 'House 2 – Gate View',       category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_3_exterior_01.webp', title: 'House 3 – Front',           category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_3_exterior_02.webp', title: 'House 3 – Side',            category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_4_exterior_01.webp', title: 'House 4 – Elevation A',     category: 'exterior', tag: 'Exterior Design' },
+  { src: '/assets/portfolio/exterior/house_4_exterior_02.webp', title: 'House 4 – Elevation B',     category: 'exterior', tag: 'Exterior Design' },
   // Interior Designs
-  { src: '/src/assets/portfolio/interior/lobby_interior.webp',              title: 'Premium Lobby',           category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/cafe_interior_1.webp',             title: 'Café — Main Hall',        category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/cafe_interior_2.webp',             title: 'Café — Counter View',     category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/cafe_interior_3.webp',             title: 'Café — Seating Area',     category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/cafe_interior_4.webp',             title: 'Café — Detail Shot',      category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/conference_room_all.webp',         title: 'Conference Room – Full',  category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/conference_room_interior_01.webp', title: 'Conference – Head Table', category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/conference_room_interior_02.webp', title: 'Conference – Side View',  category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/bedroom_interior.webp',            title: 'Master Bedroom Suite',    category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/barber_interior_01.webp',          title: 'Barber Shop — Main',      category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/barber_interior_02.webp',          title: 'Barber Shop — Angle',     category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/interior_01.webp',                 title: 'Living Space – Style A',  category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/interior_02.webp',                 title: 'Living Space – Style B',  category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/interior_03.webp',                 title: 'Hallway & Passage',       category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/interior_04.webp',                 title: 'Open Plan Lounge',        category: 'interior', tag: 'Interior Design' },
-  { src: '/src/assets/portfolio/interior/washroom_interior.webp',           title: 'Premium Washroom',        category: 'interior', tag: 'Interior Design' }
+  { src: '/assets/portfolio/interior/lobby_interior.webp',              title: 'Premium Lobby',           category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/cafe_interior_1.webp',             title: 'Café — Main Hall',        category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/cafe_interior_2.webp',             title: 'Café — Counter View',     category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/cafe_interior_3.webp',             title: 'Café — Seating Area',     category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/cafe_interior_4.webp',             title: 'Café — Detail Shot',      category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/conference_room_all.webp',         title: 'Conference Room – Full',  category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/conference_room_interior_01.webp', title: 'Conference – Head Table', category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/conference_room_interior_02.webp', title: 'Conference – Side View',  category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/bedroom_interior.webp',            title: 'Master Bedroom Suite',    category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/barber_interior_01.webp',          title: 'Barber Shop — Main',      category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/barber_interior_02.webp',          title: 'Barber Shop — Angle',     category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/interior_01.webp',                 title: 'Living Space – Style A',  category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/interior_02.webp',                 title: 'Living Space – Style B',  category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/interior_03.webp',                 title: 'Hallway & Passage',       category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/interior_04.webp',                 title: 'Open Plan Lounge',        category: 'interior', tag: 'Interior Design' },
+  { src: '/assets/portfolio/interior/washroom_interior.webp',           title: 'Premium Washroom',        category: 'interior', tag: 'Interior Design' }
 ];
 
 const CASE_STUDIES = [
@@ -326,7 +326,7 @@ function initBlueprintSlider() {
   if (!slider || !handle || !afterImg) return;
 
   // Set a real 3D render image as the "after" background
-  const afterSrc = '/src/assets/portfolio/exterior/house_1_exterior_01.webp';
+  const afterSrc = '/assets/portfolio/exterior/house_1_exterior_01.webp';
   afterImg.style.backgroundImage = `url('${afterSrc}')`;
   afterImg.style.backgroundSize = 'cover';
   afterImg.style.backgroundPosition = 'center';
