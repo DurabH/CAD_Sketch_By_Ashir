@@ -6,6 +6,19 @@
    1. DATA — Services, Portfolio & Case Studies
    ========================================================================== */
 
+const PROJECTS_2D = [
+  { id: '2d_waris', title: 'Waris Ali Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/waris_1.jpeg', '/Client_Files/2D_Designs/waris_2.jpeg', '/Client_Files/2D_Designs/waris_3.jpeg'], cover: '/Client_Files/2D_Designs/waris_1.jpeg', desc: 'Detailed 2D layout for Spanish Revival Villa.' },
+  { id: '2d_talib', title: 'Talib Hussain Project (2D Set)', tag: '2D Architectural Set', images: ['/Client_Files/Talib_Hussain/1.jpeg', '/Client_Files/Talib_Hussain/2.jpeg', '/Client_Files/Talib_Hussain/3.jpeg', '/Client_Files/Talib_Hussain/4.jpeg', '/Client_Files/Talib_Hussain/5.jpeg', '/Client_Files/Talib_Hussain/6.jpeg', '/Client_Files/Talib_Hussain/7.jpeg', '/Client_Files/Talib_Hussain/8.jpeg', '/Client_Files/Talib_Hussain/9.jpeg', '/Client_Files/Talib_Hussain/10.jpeg', '/Client_Files/Talib_Hussain/11.jpeg', '/Client_Files/Talib_Hussain/12.jpeg', '/Client_Files/Talib_Hussain/13.jpeg', '/Client_Files/Talib_Hussain/14.jpeg', '/Client_Files/Talib_Hussain/15.jpeg'], cover: '/Client_Files/Talib_Hussain/1.jpeg', desc: 'Comprehensive 15-page architectural set.' },
+  { id: '2d_afzal', title: 'Afzal Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/afzal.jpeg'], cover: '/Client_Files/2D_Designs/afzal.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_anees', title: 'Anees Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/anees.jpeg'], cover: '/Client_Files/2D_Designs/anees.jpeg', desc: 'Detailed residential layout.' },
+  { id: '2d_hannan', title: 'Hannan Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/hannan.jpeg'], cover: '/Client_Files/2D_Designs/hannan.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_haseeb', title: 'Haseeb Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/haseeb.jpeg'], cover: '/Client_Files/2D_Designs/haseeb.jpeg', desc: '6 Marla Layout.' },
+  { id: '2d_nabeel', title: 'Nabeel Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/nabeel.jpeg'], cover: '/Client_Files/2D_Designs/nabeel.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_sajjad', title: 'Sajjad & Iqrar Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/sajjad and iqrar.jpeg'], cover: '/Client_Files/2D_Designs/sajjad and iqrar.jpeg', desc: 'Dual-unit residential layout.' },
+  { id: '2d_suleman', title: 'Suleman Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/suleman.jpeg'], cover: '/Client_Files/2D_Designs/suleman.jpeg', desc: 'Narrow plot optimization plan.' },
+  { id: '2d_hashmat', title: 'Syed Hashmat Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/syed_hashmat.jpeg'], cover: '/Client_Files/2D_Designs/syed_hashmat.jpeg', desc: 'Residential 2D Floor Plan.' }
+];
+
 const SERVICES = [
   {
     icon: '📐',
@@ -131,6 +144,16 @@ const CASE_STUDIES = [
     pdf: '/pdf/SYED HASHMAT FINAL.pdf',
     review: '"Highly recommend Ali Ashir for home mapping. He understands local building codes perfectly and designed our parking and yards beautifully."',
     author: 'Syed Hashmat, Parachinar'
+  },
+  {
+    title: 'The Waris Ali Residence',
+    size: 'Approx. 4,500 SQ.FT',
+    location: 'Parachinar',
+    type: 'Spanish Revival Two-Story Villa',
+    features: ['Luxury 5-Bedroom layout', 'Spanish Revival Architecture', 'Detailed Front Elevation', 'Spacious Interior Planning', 'Full Technical Drawing Set'],
+    pdf: '/pdf/WARIS ALI DRAWINGS.pdf',
+    review: '"The Spanish Revival design is breathtaking. Ali captured every detail perfectly in the drawings."',
+    author: 'Mr. Waris Ali, Parachinar'
   }
 ];
 
@@ -453,7 +476,7 @@ function initPortfolioActions() {
   if (showLessBtn) {
     showLessBtn.addEventListener('click', () => {
       renderPortfolio(currentFilter, true); // Resets to 6 items
-      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 }
@@ -597,7 +620,7 @@ function initScrollReveal() {
   targets.forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity 0.5s ${i * 0.05}s ease, transform 0.5s ${i * 0.05}s ease`;
+    el.style.transition = `opacity 0.3s ${i * 0.02}s ease, transform 0.3s ${i * 0.02}s ease`;
     observer.observe(el);
   });
 }
@@ -643,12 +666,75 @@ function initContactForm() {
   });
 }
 
+let visibleCount2d = 6; // Initially show 6 items
+
+function renderPortfolio2D(resetCount = true) {
+  const grid = document.getElementById('portfolio2dGrid');
+  const loadMoreBtn = document.getElementById('loadMore2dBtn');
+  const showLessBtn = document.getElementById('showLess2dBtn');
+  if (!grid) return;
+  
+  if (resetCount) {
+    visibleCount2d = 6;
+  }
+
+  // Show only up to visibleCount2d items
+  const itemsToShow = PROJECTS_2D.slice(0, visibleCount2d);
+  
+  grid.innerHTML = itemsToShow.map((project, idx) => `
+    <div class="portfolio-item" data-idx="${idx}" data-filter="2d">
+      <img src="${project.cover}" alt="${project.title}" loading="lazy" width="400" height="300">
+      <div class="portfolio-overlay">
+        <span class="portfolio-tag">${project.tag}</span>
+        <h3>${project.title}</h3>
+      </div>
+    </div>
+  `).join('');
+
+  // Update button visibility
+  if (loadMoreBtn && showLessBtn) {
+    const hasMore = PROJECTS_2D.length > visibleCount2d;
+    const isExpanded = visibleCount2d > 6;
+    
+    loadMoreBtn.style.display = hasMore ? 'block' : 'none';
+    showLessBtn.style.display = isExpanded ? 'block' : 'none';
+  }
+
+  grid.querySelectorAll('.portfolio-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const itemIdx = parseInt(el.dataset.idx);
+      const project = itemsToShow[itemIdx];
+      openLightbox(project);
+    });
+  });
+}
+
+function initPortfolioActions2d() {
+  const loadMoreBtn = document.getElementById('loadMore2dBtn');
+  const showLessBtn = document.getElementById('showLess2dBtn');
+  
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount2d = PROJECTS_2D.length;
+      renderPortfolio2D(false);
+    });
+  }
+
+  if (showLessBtn) {
+    showLessBtn.addEventListener('click', () => {
+      renderPortfolio2D(true); // Resets to 6 items
+      document.getElementById('portfolio-2d').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+}
+
 /* ==========================================================================
    11. BOOT — Wire everything up when DOM is ready
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
   renderServices();
   renderPortfolio('all');
+  renderPortfolio2D();
   renderCaseStudies();
 
   initNavbar();
@@ -657,6 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBlueprintSlider();
   initPortfolioFilters();
   initPortfolioActions();
+  initPortfolioActions2d();
   initScrollReveal();
   initContactForm();
 });

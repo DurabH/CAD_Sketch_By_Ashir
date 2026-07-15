@@ -110,14 +110,15 @@
             </button>
             
             <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#portfolio" class="nav-link">3D Work</a></li>
-                    <li><a href="#case-studies" class="nav-link">Projects</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link nav-btn">Contact Me</a></li>
-                </ul>
+            <ul>
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio-2d" class="nav-link">2D Work</a></li>
+                <li><a href="#portfolio-3d" class="nav-link">3D Work</a></li>
+                <li><a href="#case-studies" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-btn">Contact Me</a></li>
+            </ul>
             </nav>
         </div>
     </header>
@@ -137,7 +138,7 @@
                 <div class="hero-actions">
                     <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
                     <a href="https://wa.me/923170047813" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <img src="/assets/icons/whatsapp.png" alt="WhatsApp" width="20" height="20">
+                        <img src="/assets/icons/whatsapp.jpg" alt="WhatsApp" width="20" height="20">
                         WhatsApp Chat
                     </a>
                 </div>
@@ -204,8 +205,30 @@
             </div>
         </section>
 
+        <!-- 2D Architectural Plans Section -->
+        <section id="portfolio-2d" class="section portfolio-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Our Work</span>
+                    <h2 class="section-title">2D Architectural Plans</h2>
+                    <p class="section-description">High-precision 2D floor plans and architectural layout sets designed for structural accuracy and TMA compliance.</p>
+                </div>
+                
+                <!-- Placeholder for 2D Grid - will need JS integration -->
+                <div class="portfolio-grid" id="portfolio2dGrid">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+                
+                <!-- Load More / Show Less Projects Button -->
+                <div class="portfolio-actions" style="margin-top: 50px; display: flex; justify-content: center; gap: 10px;">
+                    <button id="loadMore2dBtn" class="btn btn-secondary" style="min-width: 220px;">Load More 2D Projects</button>
+                    <button id="showLess2dBtn" class="btn btn-secondary" style="min-width: 220px; display: none;">Show Less</button>
+                </div>
+            </div>
+        </section>
+
         <!-- 3D Designs Gallery Section -->
-        <section id="portfolio" class="section portfolio-section">
+        <section id="portfolio-3d" class="section portfolio-section">
             <div class="container">
                 <div class="section-header">
                     <span class="subtitle">Our Work</span>
