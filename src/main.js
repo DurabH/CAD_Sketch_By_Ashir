@@ -2,8 +2,6 @@
 // Stack: Vite + Vanilla JS
 // Purpose: All interaction logic, canvas animation, dynamic rendering of data, slider, lightbox, contact form
 
-import '/src/styles/main.css';
-
 /* ==========================================================================
    1. DATA — Services, Portfolio & Case Studies
    ========================================================================== */
@@ -35,50 +33,72 @@ const SERVICES = [
   }
 ];
 
-const PORTFOLIO_ITEMS = [
-  // Exterior Designs
-  { src: '/assets/portfolio/exterior/house_exterior0.webp',     title: 'Modern Double Story',       category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_exterior_11.webp',   title: 'Contemporary Residence',    category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_exterior_22.webp',   title: 'Facade with Lawn',          category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_exterior_33.webp',   title: 'Villa Elevation',           category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_exterior_44.webp',   title: 'Corner Plot Design',        category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_1_exterior_01.webp', title: 'House 1 – Front View',      category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_1_exterior_02.webp', title: 'House 1 – Side View',       category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_1_exterior_03.webp', title: 'House 1 – Evening Render',  category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_1_exterior_04.webp', title: 'House 1 – Street View',     category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_2_exterior_01.webp', title: 'House 2 – Main Elevation',  category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_2_exterior_02.webp', title: 'House 2 – Gate View',       category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_3_exterior_01.webp', title: 'House 3 – Front',           category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_3_exterior_02.webp', title: 'House 3 – Side',            category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_4_exterior_01.webp', title: 'House 4 – Elevation A',     category: 'exterior', tag: 'Exterior Design' },
-  { src: '/assets/portfolio/exterior/house_4_exterior_02.webp', title: 'House 4 – Elevation B',     category: 'exterior', tag: 'Exterior Design' },
-  // Interior Designs
-  { src: '/assets/portfolio/interior/lobby_interior.webp',              title: 'Premium Lobby',           category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/cafe_interior_1.webp',             title: 'Café — Main Hall',        category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/cafe_interior_2.webp',             title: 'Café — Counter View',     category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/cafe_interior_3.webp',             title: 'Café — Seating Area',     category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/cafe_interior_4.webp',             title: 'Café — Detail Shot',      category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/conference_room_all.webp',         title: 'Conference Room – Full',  category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/conference_room_interior_01.webp', title: 'Conference – Head Table', category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/conference_room_interior_02.webp', title: 'Conference – Side View',  category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/bedroom_interior.webp',            title: 'Master Bedroom Suite',    category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/barber_interior_01.webp',          title: 'Barber Shop — Main',      category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/barber_interior_02.webp',          title: 'Barber Shop — Angle',     category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/interior_01.webp',                 title: 'Living Space – Style A',  category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/interior_02.webp',                 title: 'Living Space – Style B',  category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/interior_03.webp',                 title: 'Hallway & Passage',       category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/interior_04.webp',                 title: 'Open Plan Lounge',        category: 'interior', tag: 'Interior Design' },
-  { src: '/assets/portfolio/interior/washroom_interior.webp',           title: 'Premium Washroom',        category: 'interior', tag: 'Interior Design' }
+const PROJECTS = [
+  { id: 'cafe', title: 'Café Project (England)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/cafe_interior_1.webp', '/assets/portfolio/interior/cafe_interior_2.webp', '/assets/portfolio/interior/cafe_interior_3.webp', '/assets/portfolio/interior/cafe_interior_4.webp'], cover: '/assets/portfolio/interior/cafe_interior_1.webp' },
+  { id: 'house2_3', title: 'Villa Elevation', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_2_exterior_01.webp', '/assets/portfolio/exterior/house_2_exterior_02.webp', '/assets/portfolio/exterior/house_3_exterior_01.webp', '/assets/portfolio/exterior/house_3_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_2_exterior_01.webp' },
+  { id: 'house_gen1', title: 'Single Story Residence', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior0.webp'], cover: '/assets/portfolio/exterior/house_exterior0.webp', pdf2d: '/Client_Files/MR HASEEB 6 MARLA LAYOUT.pdf' },
+  { id: 'wash_bed', title: 'Master Bedroom & Washroom (Canada Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/bedroom_interior.webp', '/assets/portfolio/interior/washroom_interior.webp'], cover: '/assets/portfolio/interior/bedroom_interior.webp' },
+  { id: 'house1', title: 'Luxury Villa Elevation with Spanish Tile Roof', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_1_exterior_01.webp', '/assets/portfolio/exterior/house_1_exterior_02.webp', '/assets/portfolio/exterior/house_1_exterior_03.webp', '/assets/portfolio/exterior/house_1_exterior_04.webp'], cover: '/assets/portfolio/exterior/house_1_exterior_01.webp' },
+  { id: 'house4', title: 'Spanish Revival Two-Story Villa', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_4_exterior_01.webp', '/assets/portfolio/exterior/house_4_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_4_exterior_01.webp', pdf2d: '/Client_Files/WARIS ALI DRAWINGS.pdf' },
+  { id: 'conference_hall', title: 'Conference Room (Saudi Arabia Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/conference_room_all.webp', '/assets/portfolio/interior/conference_room_interior_01.webp', '/assets/portfolio/interior/conference_room_interior_02.webp'], cover: '/assets/portfolio/interior/conference_room_all.webp' },
+  { id: 'barber', title: 'Barber Shop (Dubai Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/barber_interior_01.webp', '/assets/portfolio/interior/barber_interior_02.webp'], cover: '/assets/portfolio/interior/barber_interior_01.webp' },
+  { id: 'house_gen2', title: 'Modernist Single Story Residence with Classical Accents', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior_11.webp'], cover: '/assets/portfolio/exterior/house_exterior_11.webp' },
+  { id: 'living_suite', title: 'Minimalist Tech Office', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/interior_01.webp', '/assets/portfolio/interior/interior_02.webp'], cover: '/assets/portfolio/interior/interior_01.webp' },
+  { id: 'house_gen3', title: 'Facade with Lawn', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior_22.webp'], cover: '/assets/portfolio/exterior/house_exterior_22.webp' },
+  { id: 'int_lounge', title: 'Shop Lounge (Oman Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/interior_04.webp'], cover: '/assets/portfolio/interior/interior_04.webp' },
+  { id: 'house_gen4', title: 'Ultra Modern Cubic Villa Design', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior_33.webp'], cover: '/assets/portfolio/exterior/house_exterior_33.webp' },
+  { id: 'int_lobby', title: 'Premium Lobby (Quetta Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/lobby_interior.webp'], cover: '/assets/portfolio/interior/lobby_interior.webp' },
+  { id: 'house_gen5', title: 'Modern Dual-Level Residential Elevation', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior_44.webp'], cover: '/assets/portfolio/exterior/house_exterior_44.webp' }
 ];
 
 const CASE_STUDIES = [
+  {
+    title: 'The Sajjad & Iqrar Residence',
+    size: 'Approx. 7,200 SQ.FT',
+    location: 'Upper Kurram, Parachinar',
+    type: 'Residential Ground Floor (Dual Units)',
+    features: ['6-Bedroom total (3+3 layout)', '3-Car Garage per unit', 'Modern TV Lounges', 'Private Verandahs & Entrances', 'Spacious Master Suites'],
+    pdf: '/Client_Files/FINAL.pdf',
+    review: '"Great work on designing a complex dual-unit residential project. The layout handles two separate family setups seamlessly."',
+    author: 'Mr. Sajjad & Mr. Iqrar'
+  },
+  {
+    title: 'The Hannan Residence',
+    size: 'Approx. 1,900 SQ.FT',
+    location: 'Parachinar',
+    type: 'Residential Ground Floor',
+    features: ['3-Bedroom layout', 'Modern TV-Lounge', 'Separate Dining & Kitchen', 'Side Yard Access', 'OTS Ventilation'],
+    pdf: '/Client_Files/HANNAN GROUND FLOOR A2.pdf',
+    review: '"Very efficient use of space. Ali provided a clear, professional blueprint that our builders found easy to follow."',
+    author: 'Mr. Hannan'
+  },
+  {
+    title: 'The Afzal Residence',
+    size: 'Approx. 2,800 SQ.FT',
+    location: 'Parachinar',
+    type: 'Residential Ground Floor',
+    features: ['4-Bedroom layout', 'Internal Verandahs', 'Separate Store', 'Electric Room', 'Open Yard Zones'],
+    pdf: '/Client_Files/AFZAL SAHAB.pdf',
+    review: '"Professional planning. Ali handled the complex room arrangements perfectly, making the layout feel spacious and organized."',
+    author: 'Afzal Khan, Parachinar'
+  },
+  {
+    title: 'The Anees Residence',
+    size: 'Approx. 3,500 SQ.FT',
+    location: 'Parachinar (Near Sports Complex)',
+    type: 'Residential Ground Floor',
+    features: ['3-Bedroom layout', 'Spacious TV Lounge', 'Dedicated Drawing Room', 'Double Verandah Access', 'Modern Kitchen & Bath Suites'],
+    pdf: '/Client_Files/final anees sahab.pdf',
+    review: '"An excellent design experience. The drawing and planning were very meticulous and met all our requirements."',
+    author: 'Mr. Anees, Parachinar'
+  },
   {
     title: 'The Suleman Residence',
     size: '2,132 SQ.FT',
     location: 'Parachinar',
     type: 'Residential Ground Floor',
     features: ['3-Bedroom layout', 'Master Bed + Dressing', 'TV-Lounge & Kitchen', 'Open Yard & Veranda', 'OTS Ventilation Zones'],
-    pdf: null,
+    pdf: '/pdf/MR. SULEMAN PROPOSAL.pdf',
     review: '"Exceptional attention to space optimization! Ali designed a perfect layout that maximized our narrow plot while maintaining excellent ventilation. Timely and professional."',
     author: 'Mr. Suleman, Parachinar'
   },
@@ -326,7 +346,8 @@ function initBlueprintSlider() {
   if (!slider || !handle || !afterImg) return;
 
   // Set a real 3D render image as the "after" background
-  const afterSrc = '/assets/portfolio/exterior/house_1_exterior_01.webp';
+  const villaElevationProject = PROJECTS.find(p => p.id === 'house2_3');
+  const afterSrc = villaElevationProject ? villaElevationProject.images[0] : '/assets/portfolio/exterior/house_1_exterior_01.webp';
   afterImg.style.backgroundImage = `url('${afterSrc}')`;
   afterImg.style.backgroundSize = 'cover';
   afterImg.style.backgroundPosition = 'center';
@@ -365,34 +386,76 @@ function initBlueprintSlider() {
    7. PORTFOLIO GRID — Filterable rendering with Lightbox
    ========================================================================== */
 let currentFilter = 'all';
+let visibleCount = 6; // Initially show 2 rows (assuming 3 per row)
 
-function renderPortfolio(filter = 'all') {
+function getFilteredProjects() {
+  return currentFilter === 'all'
+    ? PROJECTS
+    : PROJECTS.filter(project => project.category === currentFilter);
+}
+
+function renderPortfolio(filter = 'all', resetCount = true) {
   const grid = document.getElementById('portfolioGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const showLessBtn = document.getElementById('showLessBtn');
   if (!grid) return;
-  currentFilter = filter;
+  
+  if (resetCount) {
+    currentFilter = filter;
+    visibleCount = 6;
+  }
 
-  const filtered = filter === 'all'
-    ? PORTFOLIO_ITEMS
-    : PORTFOLIO_ITEMS.filter(item => item.category === filter);
+  const filtered = getFilteredProjects();
 
-  grid.innerHTML = filtered.map((item, idx) => `
-    <div class="portfolio-item" data-idx="${idx}" data-filter="${item.category}">
-      <img src="${item.src}" alt="${item.title}" loading="lazy" width="400" height="300">
+  // Show only up to visibleCount items
+  const itemsToShow = filtered.slice(0, visibleCount);
+  
+  grid.innerHTML = itemsToShow.map((project, idx) => `
+    <div class="portfolio-item" data-idx="${idx}" data-filter="${project.category}">
+      <img src="${project.cover}" alt="${project.title}" loading="lazy" width="400" height="300">
       <div class="portfolio-overlay">
-        <span class="portfolio-tag">${item.tag}</span>
-        <h3>${item.title}</h3>
+        <span class="portfolio-tag">${project.tag}</span>
+        <h3>${project.title}</h3>
       </div>
     </div>
   `).join('');
+
+  // Update button visibility
+  if (loadMoreBtn && showLessBtn) {
+    const hasMore = filtered.length > visibleCount;
+    const isExpanded = visibleCount > 6;
+    
+    loadMoreBtn.style.display = hasMore ? 'block' : 'none';
+    showLessBtn.style.display = isExpanded ? 'block' : 'none';
+  }
 
   // Click to open lightbox
   grid.querySelectorAll('.portfolio-item').forEach(el => {
     el.addEventListener('click', () => {
       const itemIdx = parseInt(el.dataset.idx);
-      const item = filtered[itemIdx];
-      openLightbox(item.src, item.title, item.tag);
+      const project = itemsToShow[itemIdx];
+      openLightbox(project);
     });
   });
+}
+
+function initPortfolioActions() {
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const showLessBtn = document.getElementById('showLessBtn');
+  
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount = getFilteredProjects().length;
+      renderPortfolio(currentFilter, false);
+    });
+  }
+
+  if (showLessBtn) {
+    showLessBtn.addEventListener('click', () => {
+      renderPortfolio(currentFilter, true); // Resets to 6 items
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 }
 
 function initPortfolioFilters() {
@@ -401,35 +464,82 @@ function initPortfolioFilters() {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderPortfolio(btn.dataset.filter);
+      renderPortfolio(btn.dataset.filter, true);
     });
   });
 }
 
-function openLightbox(src, title, tag) {
+function openLightbox(project) {
   const existing = document.getElementById('lightboxModal');
   if (existing) existing.remove();
 
   const modal = document.createElement('div');
   modal.className = 'lightbox-modal';
   modal.id = 'lightboxModal';
-  modal.style.display = 'flex';
+
+  // Carousel implementation
   modal.innerHTML = `
     <div class="lightbox-content">
       <button class="lightbox-close" aria-label="Close lightbox">✕</button>
-      <img src="${src}" alt="${title}">
+      <div class="lightbox-carousel">
+        <button class="carousel-nav prev">❮</button>
+        <div class="carousel-track">
+          ${project.images.map(img => `<img src="${img}" alt="${project.title}">`).join('')}
+        </div>
+        <button class="carousel-nav next">❯</button>
+      </div>
+      <div class="carousel-dots">
+        ${project.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-idx="${i}"></span>`).join('')}
+      </div>
       <div class="lightbox-caption">
-        <h3>${title}</h3>
-        <p>${tag}</p>
+        <h3>${project.title}</h3>
+        <p>${project.tag}</p>
       </div>
     </div>
   `;
 
   document.body.appendChild(modal);
 
-  modal.querySelector('.lightbox-close').addEventListener('click', () => modal.remove());
-  modal.addEventListener('click', (e) => { if (e.target === modal) modal.remove(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.remove(); }, { once: true });
+  // Trigger reflow to apply animation
+  requestAnimationFrame(() => {
+    modal.classList.add('is-visible');
+  });
+
+  // Carousel Logic
+  const track = modal.querySelector('.carousel-track');
+  const slides = track.querySelectorAll('img');
+  const dots = modal.querySelectorAll('.dot');
+  let currentSlide = 0;
+
+  function updateSlide() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+  }
+
+  modal.querySelector('.prev').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+  modal.querySelector('.next').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        currentSlide = parseInt(dot.dataset.idx);
+        updateSlide();
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.remove('is-visible');
+    modal.addEventListener('transitionend', () => modal.remove(), { once: true });
+  };
+
+  modal.querySelector('.lightbox-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); }, { once: true });
 }
 
 /* ==========================================================================
@@ -546,6 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSloganRotator();
   initBlueprintSlider();
   initPortfolioFilters();
+  initPortfolioActions();
   initScrollReveal();
   initContactForm();
 });
