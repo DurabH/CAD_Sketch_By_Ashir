@@ -66,6 +66,26 @@ const PROJECTS = [
 
 const CASE_STUDIES = [
   {
+    title: 'Talib Hussain Architectural Set',
+    size: '4,810 SQ.FT Total',
+    location: 'Sukkur',
+    type: 'Full Structural & Planning Set (36 Pages)',
+    features: ['Ground + First Floor + Mumty', 'Double-Heighted Living Room', 'Internal Bridge Connections', 'Complete Drainage & Sewerage', 'TMA Submission-Ready'],
+    pdf: '/pdf/MR.TALIB HUSSAIN (SUKKUR) ARCHITECTURAL DRAWING SET.pdf',
+    review: '"Ali delivered a massive 36-sheet blueprint set covering structure, plumbing, and elevations. It passed TMA approval without a single query. Absolutely brilliant work!"',
+    author: 'Mr. Talib Hussain, Sukkur'
+  },
+  {
+    title: 'The Syed Hashmat Residence',
+    size: 'Standard Plot',
+    location: 'Parachinar (Budlial)',
+    type: 'Residential Final Floor Plan',
+    features: ['4 Bedrooms Layout', 'Dual Entry Gates', 'Car Porch & Parking', 'Open Verandah & Back Gallery', 'C.Bath & Dedicated Passage'],
+    pdf: '/pdf/SYED HASHMAT FINAL.pdf',
+    review: '"Highly recommend Ali Ashir for home mapping. He understands local building codes perfectly and designed our parking and yards beautifully."',
+    author: 'Syed Hashmat, Parachinar'
+  },
+  {
     title: 'The Sajjad & Iqrar Residence',
     size: 'Approx. 7,200 SQ.FT',
     location: 'Upper Kurram, Parachinar',
@@ -124,26 +144,6 @@ const CASE_STUDIES = [
     pdf: '/pdf/MR. NABEEL PROPOSAL.pdf',
     review: '"Very detailed drawings. The spacing is incredibly comfortable and the visual structure is perfect. Ali completed changes I requested within hours."',
     author: 'Mr. M. Nabeel, Parachinar'
-  },
-  {
-    title: 'Talib Hussain Architectural Set',
-    size: '4,810 SQ.FT Total',
-    location: 'Sukkur',
-    type: 'Full Structural & Planning Set (36 Pages)',
-    features: ['Ground + First Floor + Mumty', 'Double-Heighted Living Room', 'Internal Bridge Connections', 'Complete Drainage & Sewerage', 'TMA Submission-Ready'],
-    pdf: '/pdf/MR.TALIB HUSSAIN (SUKKUR) ARCHITECTURAL DRAWING SET.pdf',
-    review: '"Ali delivered a massive 36-sheet blueprint set covering structure, plumbing, and elevations. It passed TMA approval without a single query. Absolutely brilliant work!"',
-    author: 'Mr. Talib Hussain, Sukkur'
-  },
-  {
-    title: 'The Syed Hashmat Residence',
-    size: 'Standard Plot',
-    location: 'Parachinar (Budlial)',
-    type: 'Residential Final Floor Plan',
-    features: ['4 Bedrooms Layout', 'Dual Entry Gates', 'Car Porch & Parking', 'Open Verandah & Back Gallery', 'C.Bath & Dedicated Passage'],
-    pdf: '/pdf/SYED HASHMAT FINAL.pdf',
-    review: '"Highly recommend Ali Ashir for home mapping. He understands local building codes perfectly and designed our parking and yards beautifully."',
-    author: 'Syed Hashmat, Parachinar'
   },
   {
     title: 'The Waris Ali Residence',
