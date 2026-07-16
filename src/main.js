@@ -692,8 +692,9 @@ function renderPortfolio2D(resetCount = true) {
     visibleCount2d = 6;
   }
 
-  // Show only up to visibleCount2d items
-  const itemsToShow = PROJECTS_2D.slice(0, visibleCount2d);
+  // Show all projects on mobile, else use visibleCount2d
+  const isMobile = window.innerWidth < 768;
+  const itemsToShow = isMobile ? PROJECTS_2D : PROJECTS_2D.slice(0, visibleCount2d);
   
   grid.innerHTML = itemsToShow.map((project, idx) => `
     <div class="portfolio-item" data-idx="${idx}" data-filter="2d">
@@ -712,8 +713,14 @@ function renderPortfolio2D(resetCount = true) {
     const hasMore = PROJECTS_2D.length > visibleCount2d;
     const isExpanded = visibleCount2d > 6;
     
-    loadMoreBtn.style.display = hasMore ? 'block' : 'none';
-    showLessBtn.style.display = isExpanded ? 'block' : 'none';
+    // Hide buttons on mobile entirely
+    if (isMobile) {
+        loadMoreBtn.style.display = 'none';
+        showLessBtn.style.display = 'none';
+    } else {
+        loadMoreBtn.style.display = hasMore ? 'block' : 'none';
+        showLessBtn.style.display = isExpanded ? 'block' : 'none';
+    }
   }
 
   grid.querySelectorAll('.portfolio-item').forEach(el => {
@@ -724,6 +731,12 @@ function renderPortfolio2D(resetCount = true) {
     });
   });
 }
+
+// Add resize listener to handle orientation changes or window resizing
+window.addEventListener('resize', () => {
+    renderPortfolio2D(false);
+    renderPortfolio('all', false);
+});
 
 function initPortfolioActions2d() {
   const loadMoreBtn = document.getElementById('loadMore2dBtn');
