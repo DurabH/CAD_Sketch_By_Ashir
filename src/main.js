@@ -648,14 +648,17 @@ function openLightbox(project) {
   modal.className = 'lightbox-modal';
   modal.id = 'lightboxModal';
 
-  // Build detail section if exists
+  // Build detail section with a toggle
   const detailsHtml = project.details ? `
-    <div class="lightbox-details" style="margin-top: 15px; text-align: left; border-top: 1px solid #444; padding-top: 10px; font-size: 0.9rem;">
-        <p><strong>📍 Location:</strong> ${project.details.location}</p>
-        <p><strong>📐 Size:</strong> ${project.details.size}</p>
-        <p><strong>📂 Type:</strong> ${project.details.type}</p>
-        <p><strong>✨ Features:</strong> ${project.details.features.join(', ')}</p>
-        <p><strong>👤 Author:</strong> ${project.details.author}</p>
+    <div class="lightbox-details-wrapper" style="margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;">
+        <button id="toggleDetailsBtn" class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;">View Details</button>
+        <div id="detailsContent" style="display: none; text-align: left; margin-top: 10px; font-size: 0.9rem; max-height: 200px; overflow-y: auto;">
+            <p><strong>📍 Location:</strong> ${project.details.location}</p>
+            <p><strong>📐 Size:</strong> ${project.details.size}</p>
+            <p><strong>📂 Type:</strong> ${project.details.type}</p>
+            <p><strong>✨ Features:</strong> ${project.details.features.join(', ')}</p>
+            <p><strong>👤 Author:</strong> ${project.details.author}</p>
+        </div>
     </div>
   ` : '';
 
@@ -687,6 +690,17 @@ function openLightbox(project) {
   requestAnimationFrame(() => {
     modal.classList.add('is-visible');
   });
+
+  // Details Toggle Logic
+  const toggleBtn = modal.querySelector('#toggleDetailsBtn');
+  const detailsContent = modal.querySelector('#detailsContent');
+  if (toggleBtn && detailsContent) {
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = detailsContent.style.display === 'none';
+        detailsContent.style.display = isHidden ? 'block' : 'none';
+        toggleBtn.textContent = isHidden ? 'Hide Details' : 'View Details';
+    });
+  }
 
   // Carousel Logic
   const track = modal.querySelector('.carousel-track');
