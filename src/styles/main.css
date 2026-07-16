@@ -722,6 +722,7 @@ button, input, select, textarea {
         gap: 15px;
         touch-action: pan-x pan-y;
         overscroll-behavior-x: contain;
+        align-items: center;
     }
     .portfolio-grid::-webkit-scrollbar { display: none; }
     .portfolio-item {
