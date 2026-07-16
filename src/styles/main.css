@@ -1523,6 +1523,34 @@ button, input, select, textarea {
     height: 30px;
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-card-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-methods {
+    text-align: left;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 45px;
+}
+
+.social-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
 /* ==========================================================================
    13. Animations
    ========================================================================== */
@@ -1583,14 +1611,6 @@ button, input, select, textarea {
 
     .about-info {
         order: 1;
-    }
-    
-    .contact-form-container {
-        order: 1;
-    }
-    
-    .contact-card-info {
-        order: 2;
     }
     
     .comparison-slider {
