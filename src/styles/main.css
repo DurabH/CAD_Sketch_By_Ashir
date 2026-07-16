@@ -1585,6 +1585,14 @@ button, input, select, textarea {
         order: 1;
     }
     
+    .contact-form-container {
+        order: 1;
+    }
+    
+    .contact-card-info {
+        order: 2;
+    }
+    
     .comparison-slider {
         height: 400px;
     }
