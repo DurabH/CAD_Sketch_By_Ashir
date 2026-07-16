@@ -316,6 +316,42 @@
         <section id="contact" class="section contact-section">
             <div class="container">
                 <div class="contact-grid">
+                    <!-- Client Submission Form -->
+                    <div class="contact-form-container">
+                        <form id="clientContactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="clientName">Full Name</label>
+                                <input type="text" id="clientName" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType">
+                                    <option value="2D Floor Layout">2D Floor Layout & Planning</option>
+                                    <option value="3D Front Elevation">3D Front Elevation</option>
+                                    <option value="Interior Designing">Interior Designing</option>
+                                    <option value="TMA Approval Files">TMA Approval Drawings</option>
+                                    <option value="Full Architectural Package">Full Architectural Drawing Set</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectArea">Covered Area (Sq. Ft. approx.)</label>
+                                <input type="text" id="projectArea" name="area" placeholder="e.g. 2,500 Sq. Ft.">
+                            </div>
+                            <div class="form-group">
+                                <label for="projectDetails">Project Requirements / Details</label>
+                                <textarea id="projectDetails" name="details" required rows="4" placeholder="Describe what you want to achieve..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Enquiry Details</button>
+                        </form>
+                        <div class="form-success-message" id="formSuccessMsg">
+                            <p>Enquiry Compiled Successfully! Select where you want to send it:</p>
+                            <div class="success-actions">
+                                <button class="btn btn-primary" id="sendWhatsAppBtn">Send via WhatsApp</button>
+                                <button class="btn btn-secondary" id="sendEmailBtn">Send via Email</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="contact-card-info">
                         <h2>Start Your Next Project</h2>
                         <p>Need a professional 2D/3D map, elevation drawing, or TMA approval package? Fill out the form or reach out directly via our official active social channels.</p>
@@ -353,42 +389,6 @@
                                 <a href="https://whatsapp.com/channel/0029Vb5eVJGAYlUCXrkCx30a" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp-channel-btn">
                                     <img src="/assets/logo/client-logo.jpeg" alt="WhatsApp Channel" width="18" height="18" style="border-radius: 4px;"> Channel
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Client Submission Form -->
-                    <div class="contact-form-container">
-                        <form id="clientContactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="clientName">Full Name</label>
-                                <input type="text" id="clientName" name="name" required placeholder="Enter your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="projectType">Project Type</label>
-                                <select id="projectType" name="projectType">
-                                    <option value="2D Floor Layout">2D Floor Layout & Planning</option>
-                                    <option value="3D Front Elevation">3D Front Elevation</option>
-                                    <option value="Interior Designing">Interior Designing</option>
-                                    <option value="TMA Approval Files">TMA Approval Drawings</option>
-                                    <option value="Full Architectural Package">Full Architectural Drawing Set</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="projectArea">Covered Area (Sq. Ft. approx.)</label>
-                                <input type="text" id="projectArea" name="area" placeholder="e.g. 2,500 Sq. Ft.">
-                            </div>
-                            <div class="form-group">
-                                <label for="projectDetails">Project Requirements / Details</label>
-                                <textarea id="projectDetails" name="details" required rows="4" placeholder="Describe what you want to achieve..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Enquiry Details</button>
-                        </form>
-                        <div class="form-success-message" id="formSuccessMsg">
-                            <p>Enquiry Compiled Successfully! Select where you want to send it:</p>
-                            <div class="success-actions">
-                                <button class="btn btn-primary" id="sendWhatsAppBtn">Send via WhatsApp</button>
-                                <button class="btn btn-secondary" id="sendEmailBtn">Send via Email</button>
                             </div>
                         </div>
                     </div>
