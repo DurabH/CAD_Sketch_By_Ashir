@@ -47,7 +47,7 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { id: 'cafe', title: 'Café Project (England)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/cafe_interior_1.webp', '/assets/portfolio/interior/cafe_interior_2.webp', '/assets/portfolio/interior/cafe_interior_3.webp', '/assets/portfolio/interior/cafe_interior_4.webp'], cover: '/assets/portfolio/interior/cafe_interior_1.webp' },
+  { id: 'cafe', title: 'Café Project (England)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/cafe_interior_4.webp', '/assets/portfolio/interior/cafe_interior_1.webp', '/assets/portfolio/interior/cafe_interior_2.webp', '/assets/portfolio/interior/cafe_interior_3.webp'], cover: '/assets/portfolio/interior/cafe_interior_4.webp' },
   { id: 'house2_3', title: 'Villa Elevation', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_2_exterior_01.webp', '/assets/portfolio/exterior/house_2_exterior_02.webp', '/assets/portfolio/exterior/house_3_exterior_01.webp', '/assets/portfolio/exterior/house_3_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_2_exterior_01.webp' },
   { id: 'house_gen1', title: 'Single Story Residence', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior0.webp'], cover: '/assets/portfolio/exterior/house_exterior0.webp', pdf2d: '/pdf/MR HASEEB 6 MARLA LAYOUT.pdf' },
   { id: 'wash_bed', title: 'Master Bedroom & Washroom (Canada Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/bedroom_interior.webp', '/assets/portfolio/interior/washroom_interior.webp'], cover: '/assets/portfolio/interior/bedroom_interior.webp' },
