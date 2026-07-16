@@ -7,16 +7,156 @@
    ========================================================================== */
 
 const PROJECTS_2D = [
-  { id: '2d_talib', title: 'Talib Hussain Project (2D Set)', tag: '2D Architectural Set', images: ['/assets/Talib_Hussain/5.jpeg', '/assets/Talib_Hussain/1.jpeg', '/assets/Talib_Hussain/2.jpeg', '/assets/Talib_Hussain/3.jpeg', '/assets/Talib_Hussain/4.jpeg', '/assets/Talib_Hussain/6.jpeg', '/assets/Talib_Hussain/7.jpeg', '/assets/Talib_Hussain/8.jpeg', '/assets/Talib_Hussain/9.jpeg', '/assets/Talib_Hussain/10.jpeg', '/assets/Talib_Hussain/11.jpeg', '/assets/Talib_Hussain/12.jpeg', '/assets/Talib_Hussain/13.jpeg', '/assets/Talib_Hussain/14.jpeg', '/assets/Talib_Hussain/15.jpeg'], cover: '/assets/Talib_Hussain/5.jpeg', desc: 'Comprehensive 15-page architectural set.' },
-  { id: '2d_waris', title: 'Waris Ali Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/waris_1.jpeg', '/assets/2D_Designs/waris_2.jpeg', '/assets/2D_Designs/waris_3.jpeg'], cover: '/assets/2D_Designs/waris_1.jpeg', desc: 'Detailed 2D layout for Spanish Revival Villa.' },
-  { id: '2d_afzal', title: 'Afzal Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/afzal.jpeg'], cover: '/assets/2D_Designs/afzal.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_anees', title: 'Anees Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/anees.jpeg'], cover: '/assets/2D_Designs/anees.jpeg', desc: 'Detailed residential layout.' },
-  { id: '2d_hannan', title: 'Hannan Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/hannan.jpeg'], cover: '/assets/2D_Designs/hannan.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_haseeb', title: 'Haseeb Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/haseeb.jpeg'], cover: '/assets/2D_Designs/haseeb.jpeg', desc: '6 Marla Layout.' },
-  { id: '2d_nabeel', title: 'Nabeel Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/nabeel.jpeg'], cover: '/assets/2D_Designs/nabeel.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_sajjad', title: 'Sajjad & Iqrar Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/sajjad and iqrar.jpeg'], cover: '/assets/2D_Designs/sajjad and iqrar.jpeg', desc: 'Dual-unit residential layout.' },
-  { id: '2d_suleman', title: 'Suleman Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/suleman.jpeg'], cover: '/assets/2D_Designs/suleman.jpeg', desc: 'Narrow plot optimization plan.' },
-  { id: '2d_hashmat', title: 'Syed Hashmat Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/syed_hashmat.jpeg'], cover: '/assets/2D_Designs/syed_hashmat.jpeg', desc: 'Residential 2D Floor Plan.' }
+  { 
+    id: '2d_talib', 
+    title: 'Talib Hussain Project (2D Set)', 
+    tag: '2D Architectural Set', 
+    images: ['/assets/Talib_Hussain/5.jpeg', '/assets/Talib_Hussain/1.jpeg', '/assets/Talib_Hussain/2.jpeg', '/assets/Talib_Hussain/3.jpeg', '/assets/Talib_Hussain/4.jpeg', '/assets/Talib_Hussain/6.jpeg', '/assets/Talib_Hussain/7.jpeg', '/assets/Talib_Hussain/8.jpeg', '/assets/Talib_Hussain/9.jpeg', '/assets/Talib_Hussain/10.jpeg', '/assets/Talib_Hussain/11.jpeg', '/assets/Talib_Hussain/12.jpeg', '/assets/Talib_Hussain/13.jpeg', '/assets/Talib_Hussain/14.jpeg', '/assets/Talib_Hussain/15.jpeg'], 
+    cover: '/assets/Talib_Hussain/5.jpeg', 
+    desc: 'Comprehensive 15-page architectural set.',
+    details: {
+        size: '4,810 SQ.FT Total',
+        location: 'Sukkur',
+        type: 'Full Structural & Planning Set (36 Pages)',
+        features: ['Ground + First Floor + Mumty', 'Double-Heighted Living Room', 'Internal Bridge Connections', 'Complete Drainage & Sewerage', 'TMA Submission-Ready'],
+        author: 'Mr. Talib Hussain, Sukkur'
+    }
+  },
+  { 
+    id: '2d_waris', 
+    title: 'Waris Ali Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/waris_1.jpeg', '/assets/2D_Designs/waris_2.jpeg', '/assets/2D_Designs/waris_3.jpeg'], 
+    cover: '/assets/2D_Designs/waris_1.jpeg', 
+    desc: 'Detailed 2D layout for Spanish Revival Villa.',
+    details: {
+        size: 'Approx. 4,500 SQ.FT',
+        location: 'Parachinar',
+        type: 'Spanish Revival Two-Story Villa',
+        features: ['Luxury 5-Bedroom layout', 'Spanish Revival Architecture', 'Detailed Front Elevation', 'Spacious Interior Planning'],
+        author: 'Mr. Waris Ali, Parachinar'
+    }
+  },
+  { 
+    id: '2d_afzal', 
+    title: 'Afzal Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/afzal.jpeg'], 
+    cover: '/assets/2D_Designs/afzal.jpeg', 
+    desc: 'Residential 2D Floor Plan.',
+    details: {
+        size: 'Approx. 2,800 SQ.FT',
+        location: 'Parachinar',
+        type: 'Residential Ground Floor',
+        features: ['4-Bedroom layout', 'Internal Verandahs', 'Separate Store', 'Electric Room', 'Open Yard Zones'],
+        author: 'Afzal Khan, Parachinar'
+    }
+  },
+  { 
+    id: '2d_anees', 
+    title: 'Anees Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/anees.jpeg'], 
+    cover: '/assets/2D_Designs/anees.jpeg', 
+    desc: 'Detailed residential layout.',
+    details: {
+        size: 'Approx. 3,500 SQ.FT',
+        location: 'Parachinar (Near Sports Complex)',
+        type: 'Residential Ground Floor',
+        features: ['3-Bedroom layout', 'Spacious TV Lounge', 'Dedicated Drawing Room', 'Double Verandah Access'],
+        author: 'Mr. Anees, Parachinar'
+    }
+  },
+  { 
+    id: '2d_hannan', 
+    title: 'Hannan Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/hannan.jpeg'], 
+    cover: '/assets/2D_Designs/hannan.jpeg', 
+    desc: 'Residential 2D Floor Plan.',
+    details: {
+        size: 'Approx. 1,900 SQ.FT',
+        location: 'Parachinar',
+        type: 'Residential Ground Floor',
+        features: ['3-Bedroom layout', 'Modern TV-Lounge', 'Separate Dining & Kitchen', 'Side Yard Access'],
+        author: 'Mr. Hannan'
+    }
+  },
+  { 
+    id: '2d_haseeb', 
+    title: 'Haseeb Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/haseeb.jpeg'], 
+    cover: '/assets/2D_Designs/haseeb.jpeg', 
+    desc: '6 Marla Layout.',
+    details: {
+        size: '6 Marla',
+        location: 'Parachinar',
+        type: 'Residential Layout',
+        features: ['6 Marla optimized layout'],
+        author: 'Mr. Haseeb'
+    }
+  },
+  { 
+    id: '2d_nabeel', 
+    title: 'Nabeel Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/nabeel.jpeg'], 
+    cover: '/assets/2D_Designs/nabeel.jpeg', 
+    desc: 'Residential 2D Floor Plan.',
+    details: {
+        size: '3,780 SQ.FT',
+        location: 'Parachinar',
+        type: 'Residential Ground Floor',
+        features: ['Large Master Suite', 'Guest Room + Lounge', 'Side & Back Lawns'],
+        author: 'Mr. M. Nabeel, Parachinar'
+    }
+  },
+  { 
+    id: '2d_sajjad', 
+    title: 'Sajjad & Iqrar Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/sajjad and iqrar.jpeg'], 
+    cover: '/assets/2D_Designs/sajjad and iqrar.jpeg', 
+    desc: 'Dual-unit residential layout.',
+    details: {
+        size: 'Approx. 7,200 SQ.FT',
+        location: 'Upper Kurram, Parachinar',
+        type: 'Residential Ground Floor (Dual Units)',
+        features: ['6-Bedroom total', '3-Car Garage per unit', 'Modern TV Lounges'],
+        author: 'Mr. Sajjad & Mr. Iqrar'
+    }
+  },
+  { 
+    id: '2d_suleman', 
+    title: 'Suleman Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/suleman.jpeg'], 
+    cover: '/assets/2D_Designs/suleman.jpeg', 
+    desc: 'Narrow plot optimization plan.',
+    details: {
+        size: '2,132 SQ.FT',
+        location: 'Parachinar',
+        type: 'Residential Ground Floor',
+        features: ['3-Bedroom layout', 'Master Bed + Dressing', 'TV-Lounge & Kitchen'],
+        author: 'Mr. Suleman, Parachinar'
+    }
+  },
+  { 
+    id: '2d_hashmat', 
+    title: 'Syed Hashmat Residence (2D)', 
+    tag: '2D Architectural Plan', 
+    images: ['/assets/2D_Designs/syed_hashmat.jpeg'], 
+    cover: '/assets/2D_Designs/syed_hashmat.jpeg', 
+    desc: 'Residential 2D Floor Plan.',
+    details: {
+        size: 'Standard Plot',
+        location: 'Parachinar (Budlial)',
+        type: 'Residential Final Floor Plan',
+        features: ['4 Bedrooms Layout', 'Dual Entry Gates', 'Car Porch & Parking'],
+        author: 'Syed Hashmat, Parachinar'
+    }
+  }
 ];
 
 const SERVICES = [
