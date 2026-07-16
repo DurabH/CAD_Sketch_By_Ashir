@@ -732,6 +732,9 @@ button, input, select, textarea {
         flex: 0 0 85%;
         scroll-snap-align: center;
     }
+    .portfolio-actions {
+        display: none !important;
+    }
 }
 
 .case-studies-section {
