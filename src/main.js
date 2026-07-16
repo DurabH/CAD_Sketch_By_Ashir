@@ -422,7 +422,7 @@ function renderPortfolio(filter = 'all', resetCount = true) {
   const loadMoreBtn = document.getElementById('loadMoreBtn');
   const showLessBtn = document.getElementById('showLessBtn');
   if (!grid) return;
-  
+
   if (resetCount) {
     currentFilter = filter;
     visibleCount = 6;
@@ -430,9 +430,9 @@ function renderPortfolio(filter = 'all', resetCount = true) {
 
   const filtered = getFilteredProjects();
 
-  // Show only up to visibleCount items
-  const itemsToShow = filtered.slice(0, visibleCount);
-  
+  // Show all projects on mobile, else use visibleCount
+  const itemsToShow = (window.innerWidth < 768) ? filtered : filtered.slice(0, visibleCount);
+
   grid.innerHTML = itemsToShow.map((project, idx) => `
     <div class="portfolio-item" data-idx="${idx}" data-filter="${project.category}">
       <img src="${project.cover}" alt="${project.title}" loading="lazy" width="400" height="300">
@@ -449,9 +449,15 @@ function renderPortfolio(filter = 'all', resetCount = true) {
   if (loadMoreBtn && showLessBtn) {
     const hasMore = filtered.length > visibleCount;
     const isExpanded = visibleCount > 6;
-    
-    loadMoreBtn.style.display = hasMore ? 'block' : 'none';
-    showLessBtn.style.display = isExpanded ? 'block' : 'none';
+
+    // Hide buttons on mobile entirely
+    if (window.innerWidth < 768) {
+        loadMoreBtn.style.display = 'none';
+        showLessBtn.style.display = 'none';
+    } else {
+        loadMoreBtn.style.display = hasMore ? 'block' : 'none';
+        showLessBtn.style.display = isExpanded ? 'block' : 'none';
+    }
   }
 
   // Click to open lightbox
