@@ -1591,6 +1591,9 @@ button, input, select, textarea {
 }
 
 @media (max-width: 767px) {
+    .hero-section {
+        padding-top: 20px;
+    }
     .nav-toggle {
         display: flex;
     }
