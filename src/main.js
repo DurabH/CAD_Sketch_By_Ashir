@@ -547,6 +547,25 @@ function openLightbox(project) {
     dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
   }
 
+  // Swipe logic
+  let touchStartX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) { // Minimum swipe distance
+      if (diff > 0) { // Swipe left
+        currentSlide = (currentSlide + 1) % slides.length;
+      } else { // Swipe right
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      }
+      updateSlide();
+    }
+  }, { passive: true });
+
   modal.querySelector('.prev').addEventListener('click', () => {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateSlide();
