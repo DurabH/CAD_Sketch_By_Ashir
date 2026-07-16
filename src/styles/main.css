@@ -720,6 +720,8 @@ button, input, select, textarea {
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
         gap: 15px;
+        touch-action: pan-x pan-y;
+        overscroll-behavior-x: contain;
     }
     .portfolio-grid::-webkit-scrollbar { display: none; }
     .portfolio-item {
