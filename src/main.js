@@ -648,6 +648,17 @@ function openLightbox(project) {
   modal.className = 'lightbox-modal';
   modal.id = 'lightboxModal';
 
+  // Build detail section if exists
+  const detailsHtml = project.details ? `
+    <div class="lightbox-details" style="margin-top: 15px; text-align: left; border-top: 1px solid #444; padding-top: 10px; font-size: 0.9rem;">
+        <p><strong>📍 Location:</strong> ${project.details.location}</p>
+        <p><strong>📐 Size:</strong> ${project.details.size}</p>
+        <p><strong>📂 Type:</strong> ${project.details.type}</p>
+        <p><strong>✨ Features:</strong> ${project.details.features.join(', ')}</p>
+        <p><strong>👤 Author:</strong> ${project.details.author}</p>
+    </div>
+  ` : '';
+
   // Carousel implementation
   modal.innerHTML = `
     <div class="lightbox-content">
@@ -665,6 +676,7 @@ function openLightbox(project) {
       <div class="lightbox-caption">
         <h3>${project.title}</h3>
         <p>${project.tag}</p>
+        ${detailsHtml}
       </div>
     </div>
   `;
