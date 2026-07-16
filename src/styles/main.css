@@ -1578,9 +1578,9 @@ button, input, select, textarea {
     }
     
     .about-visual {
-        order: 2;
+        order: -1;
     }
-    
+
     .about-info {
         order: 1;
     }
