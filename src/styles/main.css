@@ -714,6 +714,9 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+    .comparison-image {
+        object-fit: contain;
+    }
     .portfolio-grid {
         display: flex;
         overflow-x: auto;
