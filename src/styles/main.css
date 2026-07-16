@@ -713,6 +713,21 @@ button, input, select, textarea {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .portfolio-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 15px;
+    }
+    .portfolio-grid::-webkit-scrollbar { display: none; }
+    .portfolio-item {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+}
+
 .case-studies-section {
     position: relative;
     padding: 100px 0;
@@ -875,6 +890,19 @@ button, input, select, textarea {
 
 .carousel-nav.prev { left: 10px; }
 .carousel-nav.next { right: 10px; }
+
+.portfolio-dots {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-dots {
+        display: flex;
+    }
+}
 
 .carousel-dots {
     display: flex;

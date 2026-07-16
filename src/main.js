@@ -7,16 +7,16 @@
    ========================================================================== */
 
 const PROJECTS_2D = [
-  { id: '2d_waris', title: 'Waris Ali Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/waris_1.jpeg', '/Client_Files/2D_Designs/waris_2.jpeg', '/Client_Files/2D_Designs/waris_3.jpeg'], cover: '/Client_Files/2D_Designs/waris_1.jpeg', desc: 'Detailed 2D layout for Spanish Revival Villa.' },
-  { id: '2d_talib', title: 'Talib Hussain Project (2D Set)', tag: '2D Architectural Set', images: ['/Client_Files/Talib_Hussain/1.jpeg', '/Client_Files/Talib_Hussain/2.jpeg', '/Client_Files/Talib_Hussain/3.jpeg', '/Client_Files/Talib_Hussain/4.jpeg', '/Client_Files/Talib_Hussain/5.jpeg', '/Client_Files/Talib_Hussain/6.jpeg', '/Client_Files/Talib_Hussain/7.jpeg', '/Client_Files/Talib_Hussain/8.jpeg', '/Client_Files/Talib_Hussain/9.jpeg', '/Client_Files/Talib_Hussain/10.jpeg', '/Client_Files/Talib_Hussain/11.jpeg', '/Client_Files/Talib_Hussain/12.jpeg', '/Client_Files/Talib_Hussain/13.jpeg', '/Client_Files/Talib_Hussain/14.jpeg', '/Client_Files/Talib_Hussain/15.jpeg'], cover: '/Client_Files/Talib_Hussain/1.jpeg', desc: 'Comprehensive 15-page architectural set.' },
-  { id: '2d_afzal', title: 'Afzal Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/afzal.jpeg'], cover: '/Client_Files/2D_Designs/afzal.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_anees', title: 'Anees Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/anees.jpeg'], cover: '/Client_Files/2D_Designs/anees.jpeg', desc: 'Detailed residential layout.' },
-  { id: '2d_hannan', title: 'Hannan Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/hannan.jpeg'], cover: '/Client_Files/2D_Designs/hannan.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_haseeb', title: 'Haseeb Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/haseeb.jpeg'], cover: '/Client_Files/2D_Designs/haseeb.jpeg', desc: '6 Marla Layout.' },
-  { id: '2d_nabeel', title: 'Nabeel Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/nabeel.jpeg'], cover: '/Client_Files/2D_Designs/nabeel.jpeg', desc: 'Residential 2D Floor Plan.' },
-  { id: '2d_sajjad', title: 'Sajjad & Iqrar Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/sajjad and iqrar.jpeg'], cover: '/Client_Files/2D_Designs/sajjad and iqrar.jpeg', desc: 'Dual-unit residential layout.' },
-  { id: '2d_suleman', title: 'Suleman Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/suleman.jpeg'], cover: '/Client_Files/2D_Designs/suleman.jpeg', desc: 'Narrow plot optimization plan.' },
-  { id: '2d_hashmat', title: 'Syed Hashmat Residence (2D)', tag: '2D Architectural Plan', images: ['/Client_Files/2D_Designs/syed_hashmat.jpeg'], cover: '/Client_Files/2D_Designs/syed_hashmat.jpeg', desc: 'Residential 2D Floor Plan.' }
+  { id: '2d_waris', title: 'Waris Ali Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/waris_1.jpeg', '/assets/2D_Designs/waris_2.jpeg', '/assets/2D_Designs/waris_3.jpeg'], cover: '/assets/2D_Designs/waris_1.jpeg', desc: 'Detailed 2D layout for Spanish Revival Villa.' },
+  { id: '2d_talib', title: 'Talib Hussain Project (2D Set)', tag: '2D Architectural Set', images: ['/assets/Talib_Hussain/1.jpeg', '/assets/Talib_Hussain/2.jpeg', '/assets/Talib_Hussain/3.jpeg', '/assets/Talib_Hussain/4.jpeg', '/assets/Talib_Hussain/5.jpeg', '/assets/Talib_Hussain/6.jpeg', '/assets/Talib_Hussain/7.jpeg', '/assets/Talib_Hussain/8.jpeg', '/assets/Talib_Hussain/9.jpeg', '/assets/Talib_Hussain/10.jpeg', '/assets/Talib_Hussain/11.jpeg', '/assets/Talib_Hussain/12.jpeg', '/assets/Talib_Hussain/13.jpeg', '/assets/Talib_Hussain/14.jpeg', '/assets/Talib_Hussain/15.jpeg'], cover: '/assets/Talib_Hussain/1.jpeg', desc: 'Comprehensive 15-page architectural set.' },
+  { id: '2d_afzal', title: 'Afzal Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/afzal.jpeg'], cover: '/assets/2D_Designs/afzal.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_anees', title: 'Anees Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/anees.jpeg'], cover: '/assets/2D_Designs/anees.jpeg', desc: 'Detailed residential layout.' },
+  { id: '2d_hannan', title: 'Hannan Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/hannan.jpeg'], cover: '/assets/2D_Designs/hannan.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_haseeb', title: 'Haseeb Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/haseeb.jpeg'], cover: '/assets/2D_Designs/haseeb.jpeg', desc: '6 Marla Layout.' },
+  { id: '2d_nabeel', title: 'Nabeel Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/nabeel.jpeg'], cover: '/assets/2D_Designs/nabeel.jpeg', desc: 'Residential 2D Floor Plan.' },
+  { id: '2d_sajjad', title: 'Sajjad & Iqrar Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/sajjad and iqrar.jpeg'], cover: '/assets/2D_Designs/sajjad and iqrar.jpeg', desc: 'Dual-unit residential layout.' },
+  { id: '2d_suleman', title: 'Suleman Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/suleman.jpeg'], cover: '/assets/2D_Designs/suleman.jpeg', desc: 'Narrow plot optimization plan.' },
+  { id: '2d_hashmat', title: 'Syed Hashmat Residence (2D)', tag: '2D Architectural Plan', images: ['/assets/2D_Designs/syed_hashmat.jpeg'], cover: '/assets/2D_Designs/syed_hashmat.jpeg', desc: 'Residential 2D Floor Plan.' }
 ];
 
 const SERVICES = [
@@ -49,10 +49,10 @@ const SERVICES = [
 const PROJECTS = [
   { id: 'cafe', title: 'Café Project (England)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/cafe_interior_1.webp', '/assets/portfolio/interior/cafe_interior_2.webp', '/assets/portfolio/interior/cafe_interior_3.webp', '/assets/portfolio/interior/cafe_interior_4.webp'], cover: '/assets/portfolio/interior/cafe_interior_1.webp' },
   { id: 'house2_3', title: 'Villa Elevation', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_2_exterior_01.webp', '/assets/portfolio/exterior/house_2_exterior_02.webp', '/assets/portfolio/exterior/house_3_exterior_01.webp', '/assets/portfolio/exterior/house_3_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_2_exterior_01.webp' },
-  { id: 'house_gen1', title: 'Single Story Residence', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior0.webp'], cover: '/assets/portfolio/exterior/house_exterior0.webp', pdf2d: '/Client_Files/MR HASEEB 6 MARLA LAYOUT.pdf' },
+  { id: 'house_gen1', title: 'Single Story Residence', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior0.webp'], cover: '/assets/portfolio/exterior/house_exterior0.webp', pdf2d: '/pdf/MR HASEEB 6 MARLA LAYOUT.pdf' },
   { id: 'wash_bed', title: 'Master Bedroom & Washroom (Canada Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/bedroom_interior.webp', '/assets/portfolio/interior/washroom_interior.webp'], cover: '/assets/portfolio/interior/bedroom_interior.webp' },
   { id: 'house1', title: 'Luxury Villa Elevation with Spanish Tile Roof', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_1_exterior_01.webp', '/assets/portfolio/exterior/house_1_exterior_02.webp', '/assets/portfolio/exterior/house_1_exterior_03.webp', '/assets/portfolio/exterior/house_1_exterior_04.webp'], cover: '/assets/portfolio/exterior/house_1_exterior_01.webp' },
-  { id: 'house4', title: 'Spanish Revival Two-Story Villa', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_4_exterior_01.webp', '/assets/portfolio/exterior/house_4_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_4_exterior_01.webp', pdf2d: '/Client_Files/WARIS ALI DRAWINGS.pdf' },
+  { id: 'house4', title: 'Spanish Revival Two-Story Villa', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_4_exterior_01.webp', '/assets/portfolio/exterior/house_4_exterior_02.webp'], cover: '/assets/portfolio/exterior/house_4_exterior_01.webp', pdf2d: '/pdf/WARIS ALI DRAWINGS.pdf' },
   { id: 'conference_hall', title: 'Conference Room (Saudi Arabia Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/conference_room_all.webp', '/assets/portfolio/interior/conference_room_interior_01.webp', '/assets/portfolio/interior/conference_room_interior_02.webp'], cover: '/assets/portfolio/interior/conference_room_all.webp' },
   { id: 'barber', title: 'Barber Shop (Dubai Client)', category: 'interior', tag: 'Interior Design', images: ['/assets/portfolio/interior/barber_interior_01.webp', '/assets/portfolio/interior/barber_interior_02.webp'], cover: '/assets/portfolio/interior/barber_interior_01.webp' },
   { id: 'house_gen2', title: 'Modernist Single Story Residence with Classical Accents', category: 'exterior', tag: 'Exterior Design', images: ['/assets/portfolio/exterior/house_exterior_11.webp'], cover: '/assets/portfolio/exterior/house_exterior_11.webp' },
@@ -71,7 +71,7 @@ const CASE_STUDIES = [
     location: 'Upper Kurram, Parachinar',
     type: 'Residential Ground Floor (Dual Units)',
     features: ['6-Bedroom total (3+3 layout)', '3-Car Garage per unit', 'Modern TV Lounges', 'Private Verandahs & Entrances', 'Spacious Master Suites'],
-    pdf: '/Client_Files/FINAL.pdf',
+    pdf: '/pdf/FINAL.pdf',
     review: '"Great work on designing a complex dual-unit residential project. The layout handles two separate family setups seamlessly."',
     author: 'Mr. Sajjad & Mr. Iqrar'
   },
@@ -81,7 +81,7 @@ const CASE_STUDIES = [
     location: 'Parachinar',
     type: 'Residential Ground Floor',
     features: ['3-Bedroom layout', 'Modern TV-Lounge', 'Separate Dining & Kitchen', 'Side Yard Access', 'OTS Ventilation'],
-    pdf: '/Client_Files/HANNAN GROUND FLOOR A2.pdf',
+    pdf: '/pdf/HANNAN GROUND FLOOR A2.pdf',
     review: '"Very efficient use of space. Ali provided a clear, professional blueprint that our builders found easy to follow."',
     author: 'Mr. Hannan'
   },
@@ -91,7 +91,7 @@ const CASE_STUDIES = [
     location: 'Parachinar',
     type: 'Residential Ground Floor',
     features: ['4-Bedroom layout', 'Internal Verandahs', 'Separate Store', 'Electric Room', 'Open Yard Zones'],
-    pdf: '/Client_Files/AFZAL SAHAB.pdf',
+    pdf: '/pdf/AFZAL SAHAB.pdf',
     review: '"Professional planning. Ali handled the complex room arrangements perfectly, making the layout feel spacious and organized."',
     author: 'Afzal Khan, Parachinar'
   },
@@ -101,7 +101,7 @@ const CASE_STUDIES = [
     location: 'Parachinar (Near Sports Complex)',
     type: 'Residential Ground Floor',
     features: ['3-Bedroom layout', 'Spacious TV Lounge', 'Dedicated Drawing Room', 'Double Verandah Access', 'Modern Kitchen & Bath Suites'],
-    pdf: '/Client_Files/final anees sahab.pdf',
+    pdf: '/pdf/final anees sahab.pdf',
     review: '"An excellent design experience. The drawing and planning were very meticulous and met all our requirements."',
     author: 'Mr. Anees, Parachinar'
   },
@@ -443,6 +443,8 @@ function renderPortfolio(filter = 'all', resetCount = true) {
     </div>
   `).join('');
 
+  renderDots('portfolioGrid', 'dots3d', itemsToShow);
+
   // Update button visibility
   if (loadMoreBtn && showLessBtn) {
     const hasMore = filtered.length > visibleCount;
@@ -476,7 +478,7 @@ function initPortfolioActions() {
   if (showLessBtn) {
     showLessBtn.addEventListener('click', () => {
       renderPortfolio(currentFilter, true); // Resets to 6 items
-      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('portfolio-3d').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 }
@@ -690,6 +692,8 @@ function renderPortfolio2D(resetCount = true) {
       </div>
     </div>
   `).join('');
+  
+  renderDots('portfolio2dGrid', 'dots2d', itemsToShow);
 
   // Update button visibility
   if (loadMoreBtn && showLessBtn) {
@@ -728,6 +732,46 @@ function initPortfolioActions2d() {
   }
 }
 
+function renderDots(gridId, dotsId, projects) {
+  const dotsContainer = document.getElementById(dotsId);
+  if (!dotsContainer) return;
+  
+  const totalDots = projects.length;
+  dotsContainer.innerHTML = Array.from({length: totalDots}, (_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-idx="${i}"></span>`).join('');
+  
+  const grid = document.getElementById(gridId);
+  grid.addEventListener('scroll', () => {
+    updateActiveDot(grid, dotsContainer);
+  }, { passive: true });
+}
+
+function updateActiveDot(grid, dotsContainer) {
+    const scrollPos = grid.scrollLeft;
+    const itemWidth = grid.offsetWidth * 0.85; 
+    const activeIdx = Math.round(scrollPos / itemWidth);
+    dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIdx);
+    });
+}
+
+function initCaseStudiesCarousel() {
+  const grid = document.getElementById('caseStudiesGrid');
+  const prevBtn = document.querySelector('.carousel-nav-case.prev');
+  const nextBtn = document.querySelector('.carousel-nav-case.next');
+  
+  if (!grid || !prevBtn || !nextBtn) return;
+  
+  const scrollAmount = 350 + 30; // Card width + gap
+
+  prevBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
+
 /* ==========================================================================
    11. BOOT — Wire everything up when DOM is ready
    ========================================================================== */
@@ -744,6 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPortfolioFilters();
   initPortfolioActions();
   initPortfolioActions2d();
+  initCaseStudiesCarousel();
   initScrollReveal();
   initContactForm();
 });
