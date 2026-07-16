@@ -657,12 +657,7 @@ function initScrollReveal() {
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('clientContactForm');
-  const successMsg = document.getElementById('formSuccessMsg');
-  const whatsappBtn = document.getElementById('sendWhatsAppBtn');
-  const emailBtn = document.getElementById('sendEmailBtn');
   if (!form) return;
-
-  let compiledMessage = '';
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -671,25 +666,17 @@ function initContactForm() {
     const area = document.getElementById('projectArea').value.trim();
     const details = document.getElementById('projectDetails').value.trim();
 
-    compiledMessage = `*New Project Enquiry — CAD SKETCH By Ashir*\n\n` +
+    const compiledMessage = `*New Project Enquiry — CAD SKETCH By Ashir*\n\n` +
       `👤 *Name:* ${name}\n` +
       `📐 *Project Type:* ${projectType}\n` +
       `📏 *Covered Area:* ${area || 'Not specified'}\n` +
       `📝 *Requirements:*\n${details}`;
 
-    form.style.display = 'none';
-    successMsg.style.display = 'flex';
-  });
-
-  whatsappBtn?.addEventListener('click', () => {
     const encoded = encodeURIComponent(compiledMessage);
     window.open(`https://wa.me/923170047813?text=${encoded}`, '_blank');
-  });
-
-  emailBtn?.addEventListener('click', () => {
-    const subject = encodeURIComponent('Project Enquiry — CAD SKETCH By Ashir');
-    const body = encodeURIComponent(compiledMessage.replace(/\*/g, ''));
-    window.open(`mailto:ashir313ali@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    
+    // Optional: Reset form after sending
+    form.reset();
   });
 }
 
