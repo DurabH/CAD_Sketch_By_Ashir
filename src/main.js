@@ -76,7 +76,7 @@ const PROJECTS_2D = [
     desc: 'Residential 2D Floor Plan.',
     details: {
         size: 'Approx. 1,900 SQ.FT',
-        location: 'Parachinar',
+        location: 'Chakwal',
         type: 'Residential Ground Floor',
         features: ['3-Bedroom layout', 'Modern TV-Lounge', 'Separate Dining & Kitchen', 'Side Yard Access'],
         author: 'Mr. Hannan'
@@ -238,7 +238,7 @@ const CASE_STUDIES = [
   {
     title: 'The Hannan Residence',
     size: 'Approx. 1,900 SQ.FT',
-    location: 'Parachinar',
+    location: 'Chakwal',
     type: 'Residential Ground Floor',
     features: ['3-Bedroom layout', 'Modern TV-Lounge', 'Separate Dining & Kitchen', 'Side Yard Access', 'OTS Ventilation'],
     pdf: '/pdf/HANNAN GROUND FLOOR A2.pdf',
@@ -650,9 +650,9 @@ function openLightbox(project) {
 
   // Build detail section with a toggle
   const detailsHtml = project.details ? `
-    <div class="lightbox-details-wrapper" style="margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;">
-        <button id="toggleDetailsBtn" class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;">View Details</button>
-        <div id="detailsContent" style="display: none; text-align: left; margin-top: 10px; font-size: 0.9rem; max-height: 200px; overflow-y: auto;">
+    <div class="lightbox-details-wrapper">
+        <button id="toggleDetailsBtn" class="btn btn-secondary">View Details</button>
+        <div id="detailsContent" class="lightbox-details-content" style="display: none;">
             <p><strong>📍 Location:</strong> ${project.details.location}</p>
             <p><strong>📐 Size:</strong> ${project.details.size}</p>
             <p><strong>📂 Type:</strong> ${project.details.type}</p>

@@ -418,6 +418,12 @@ button, input, select, textarea {
     animation: bounce 2s infinite;
 }
 
+@media (max-width: 480px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
 .mouse-icon {
     display: block;
     width: 26px;
@@ -843,9 +849,10 @@ button, input, select, textarea {
 .lightbox-content {
     max-width: 900px;
     width: 100%;
+    max-height: 90vh;
     background: #111;
     border-radius: 12px;
-    overflow: hidden;
+    overflow-y: auto;
     transform: scale(0.9);
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
@@ -1620,7 +1627,10 @@ button, input, select, textarea {
 
 @media (max-width: 767px) {
     .hero-section {
-        padding-top: 20px;
+        padding-top: 110px;
+        height: auto;
+        min-height: auto;
+        align-items: flex-start;
     }
     .nav-toggle {
         display: flex;
@@ -1690,4 +1700,45 @@ button, input, select, textarea {
         max-width: 340px;
         height: 200px;
     }
+}
+
+/* Lightbox Details Styles */
+.lightbox-details-wrapper {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+#toggleDetailsBtn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+}
+
+.lightbox-details-content {
+    text-align: left;
+    margin-top: 15px;
+    padding: 15px;
+    background: #0a0a0a;
+    border-radius: 8px;
+    border: 1px solid #222;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #fff !important;
+}
+
+.lightbox-details-content p {
+    color: #fff !important;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.lightbox-details-content p strong {
+    color: var(--color-accent-amber);
+    display: inline-block;
+    min-width: 100px;
+    flex-shrink: 0;
 }
