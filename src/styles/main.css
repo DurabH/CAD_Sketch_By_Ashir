@@ -467,8 +467,9 @@ button, input, select, textarea {
 }
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
     gap: 30px;
+    justify-content: center;
 }
 
 .service-card {
@@ -1280,8 +1281,12 @@ button, input, select, textarea {
 .contact-section {
     position: relative;
     padding: 100px 0;
-    /* Professional gradient: Black base, subtle grey, golden/yellow accents */
-    background: radial-gradient(circle at 50% 50%, rgba(229, 169, 60, 0.15) 0%, rgba(30, 32, 35, 0.95) 50%, rgba(7, 8, 10, 1) 100%);
+    /* Interior design photo with fade overlay */
+    background: 
+        linear-gradient(to bottom, rgba(7, 8, 10, 0.95), rgba(7, 8, 10, 0.85)),
+        url('/assets/portfolio/interior/cafe_interior_1.webp');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     border-bottom: 1px solid var(--color-border);
 }
@@ -1701,12 +1706,50 @@ button, input, select, textarea {
     }
 }
 
-/* Lightbox Details Styles */
-.lightbox-details-wrapper {
-    margin-top: 20px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
+/* Discount Stamp Styles */
+.sun-stamp {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 110px;
+    height: 110px;
+    /* Sleek Dark Golden Gradient */
+    background: radial-gradient(circle at 30% 30%, #d4af37 0%, #b8860b 50%, #8b6508 100%);
+    border: 3px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transform: rotate(-15deg);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    /* Sunburst shape */
+    clip-path: polygon(50% 0%, 61% 15%, 78% 7%, 75% 25%, 92% 31%, 80% 45%, 95% 58%, 80% 68%, 92% 81%, 75% 85%, 61% 100%, 50% 85%, 39% 100%, 25% 85%, 8% 81%, 20% 68%, 5% 58%, 20% 45%, 8% 31%, 25% 25%, 22% 7%, 39% 15%);
 }
+
+/* Rotating Sparkle Effect */
+.sun-stamp::before, .sun-stamp::after {
+    content: "✦";
+    position: absolute;
+    color: #ffcc00;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #fff;
+    animation: rotateSparkles 6s linear infinite;
+}
+
+.sun-stamp::before { top: 0; right: 20px; }
+.sun-stamp::after { bottom: 0; left: 20px; animation-direction: reverse; }
+
+@keyframes rotateSparkles {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 
 #toggleDetailsBtn {
     width: 100%;
@@ -1740,4 +1783,13 @@ button, input, select, textarea {
     display: inline-block;
     min-width: 100px;
     flex-shrink: 0;
+}
+
+#premium-resources {
+    position: relative;
+    padding: 100px 0;
+    /* Matches case-studies-section background */
+    background: radial-gradient(circle at 50% 50%, rgba(229, 169, 60, 0.15) 0%, rgba(30, 32, 35, 0.95) 50%, rgba(7, 8, 10, 1) 100%);
+    background-attachment: fixed;
+    border-bottom: 1px solid var(--color-border);
 }

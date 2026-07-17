@@ -173,6 +173,12 @@ const SERVICES = [
     ref: 'Included in comprehensive architectural drawing sets'
   },
   {
+    icon: '🚰',
+    title: 'Sewerage Planning',
+    desc: 'Precision drainage and sewerage system design to ensure proper waste management and efficient site utility planning.',
+    ref: 'Compliant with local drainage standards'
+  },
+  {
     icon: '🏠',
     title: '3D Elevation',
     desc: 'Stunning daytime and dusk photorealistic exterior facade renderings that bring your building design to life.',
