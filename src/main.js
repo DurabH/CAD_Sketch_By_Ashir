@@ -167,8 +167,14 @@ const SERVICES = [
     ref: 'Backed by real client proposals: up to 3,780 sq.ft covered'
   },
   {
+    icon: '💡',
+    title: 'Electrical & Plumbing Planning',
+    desc: 'Detailed schematic planning for electrical circuits and plumbing layouts to ensure structural integrity and code compliance.',
+    ref: 'Included in comprehensive architectural drawing sets'
+  },
+  {
     icon: '🏠',
-    title: '3D Front Elevations',
+    title: '3D Elevation',
     desc: 'Stunning daytime and dusk photorealistic exterior facade renderings that bring your building design to life.',
     ref: 'Multi-story residential house renders available'
   },

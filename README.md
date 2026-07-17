@@ -70,3 +70,25 @@ To run this website locally or build for production:
     npm run build
     ```
 
+=========================
+
+[plugin:vite:css] [postcss] D:/CAD_Sketch_By_Ashir/src/styles/main.css:474:1: Unexpected }
+D:/CAD_Sketch_By_Ashir/src/styles/main.css:474:0
+472|  }
+473|      justify-content: center;
+474|  }
+   |  ^
+475|  
+476|  .service-card {
+    at Input.error (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\input.js:135:16)
+    at Parser.unexpectedClose (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:594:22)
+    at Parser.end (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:337:12)
+    at Parser.parse (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:463:16)
+    at parse (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parse.js:11:12)
+    at new LazyResult (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\lazy-result.js:171:16)
+    at Processor.process (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\processor.js:53:14)
+    at compileCSS (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:36898:59)
+    at async TransformPluginContext.transform (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:36171:11)
+    at async PluginContainer.transform (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18
+Click outside, press Esc key, or fix the code to dismiss.
+You can also disable this overlay by setting server.hmr.overlay to false in vite.config.js.
