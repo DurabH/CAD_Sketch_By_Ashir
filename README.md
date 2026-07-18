@@ -1,8 +1,5 @@
 # CAD SKETCH By Ashir — Professional Architectural Design Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live-View_Portfolio-blue?style=for-the-badge)](https://durabh.github.io/CAD_Sketch_By_Ashir/)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/DurabH/CAD_Sketch_By_Ashir)
-
 A high-performance, responsive portfolio website built for **Ali Ashir**, a professional AutoCAD Designer and Architectural Draftsman. This project showcases architectural layout sets, 3D renderings, and technical documentation with a focus on speed, user experience, and SEO optimization.
 
 ---
