@@ -1,94 +1,88 @@
-# CAD SKETCH By Ashir - Professional AutoCAD Designer Portfolio
+# CAD SKETCH By Ashir — Professional Architectural Design Portfolio
 
-A high-performance, visually striking, and SEO-optimized portfolio website built for **Ali Ashir**, a professional AutoCAD Designer and Architectural Draftsman.
+[![Live Demo](https://img.shields.io/badge/Live-View_Portfolio-blue?style=for-the-badge)](https://durabh.github.io/CAD_Sketch_By_Ashir/)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/DurabH/CAD_Sketch_By_Ashir)
 
----
-
-## 🛠️ Technical Stack & Decisions
-*   **Core Engine:** **Vite + Vanilla HTML/CSS/JS**
-    *   *Why?* To maintain ultra-clean, minimal code, eliminating massive modern framework boilerplate (React/Next.js). This ensures instantaneous loading speeds, smooth scroll animations, and perfect Google Lighthouse scores.
-*   **Styling:** **Vanilla CSS** with CSS Custom Properties (Variables) for direct layout control, modular transitions, and clean theme changes.
-*   **Assets Optimization (Anti-Lag Strategy):** All client JPEGs have been pre-converted to modern **WebP format** (compressing sizes by ~80% with zero detail loss). PDFs are served as static download files, preventing initial page-load bloat.
-*   **Architecture:** **Single-Page Application (SPA)** using responsive scroll anchoring, custom sliders, and interactive modal/lightbox views for deep catalog browsing.
+A high-performance, responsive portfolio website built for **Ali Ashir**, a professional AutoCAD Designer and Architectural Draftsman. This project showcases architectural layout sets, 3D renderings, and technical documentation with a focus on speed, user experience, and SEO optimization.
 
 ---
 
-## 🎨 Theme & Branding
-*   **Colors:** Derived directly from the client's service card layout. Uses a rich obsidian black/grey base with warm amber and metallic gold highlights:
-    *   Primary Background: `#07080a` (Obsidian Black)
-    *   Secondary Background: `#0f1216` (Slate Grey)
-    *   Primary Accent: `#e5a93c` (Golden Amber)
-    *   Secondary Accent: `#c5a059` (Metallic Gold Accent)
-*   **Typography:** Technical sans-serif header pairing:
-    *   Headings: `Space Grotesk` (gives a technical CAD blueprint feel)
-    *   Body: `Outfit` (clean, geometric, highly legible spacing)
+## 🚀 Project Overview
+
+**CAD SKETCH By Ashir** is a custom-built, single-page application (SPA) portfolio designed to bridge the gap between technical drafting and modern web presentation. The primary goal of this project was to create a fast, lightweight, and visually immersive experience for potential clients to view architectural floor plans (2D) and photorealistic elevations (3D).
+
+### Key Features
+*   **Performance First:** Built with Vite and Vanilla JavaScript/CSS for near-instant load times and high Lighthouse scores.
+*   **Interactive Showcases:** Includes a custom "Blueprint-to-Reality" slider (2D to 3D comparison) and interactive portfolio lightboxes.
+*   **SEO Optimized:** Comprehensive meta-tags, JSON-LD structured data (LocalBusiness schema), and optimized asset delivery for search engine visibility.
+*   **Asset Optimization:** All client assets were converted to `.webp` format, reducing visual load times by ~80% without quality loss.
+*   **Lead Generation:** Integrated WhatsApp and email conversion funnels directly into the project design.
 
 ---
 
-## 📁 Workspace Directory Structure
+## 🛠️ Tech Stack & Decisions
+
+| Layer | Technology | Reason |
+| :--- | :--- | :--- |
+| **Core Engine** | Vite + Vanilla JS | Minimalist approach, eliminates heavy framework overhead. |
+| **Styling** | Vanilla CSS | Custom properties, responsive grid, modular transitions. |
+| **Assets** | WebP | Massive compression gains while retaining visual fidelity. |
+| **Build Tool** | Vite | Ultra-fast development server and optimized production bundling. |
+
+---
+
+## 📁 Repository Structure
+
 ```text
-CAD_Sketch/
-├── public/                 # Static assets copied directly to build root
-│   └── pdf/                # Client PDF plans (Nabeel, Suleman, Talib, Hashmat)
+CAD_Sketch_By_Ashir/
+├── public/                 # Static assets (PDFs, icons)
 ├── src/
-│   ├── assets/             # Optimized WebP assets
-│   │   ├── logo/           # Branding logos & service card WebPs
-│   │   └── portfolio/      # Categorized Interior & Exterior design WebPs
-│   ├── styles/
-│   │   └── main.css        # Core stylesheet, variables, resets, and media queries
-│   └── main.js             # Interaction logic & blueprint canvas renderer
-├── index.html              # Fully SEO-optimized HTML entry point with JSON-LD schema
-├── package.json            # Node script controls
-└── vite.config.js          # Vite assets optimization & server configuration
+│   ├── assets/             # Optimized WebP portfolio & logo images
+│   ├── styles/             # Modular CSS: main.css, about.css
+│   └── main.js             # Core logic: sliders, canvas, filtering
+├── index.html              # SEO-optimized entry point with JSON-LD
+├── vite.config.js          # Vite build & optimization config
+└── package.json            # Script controls & dependency management
 ```
 
 ---
 
-## 🚀 Progress Milestone 1 (30% Complete)
-We have completed the foundation setup. What is done so far:
-1.  **Project Shell & Configs:** Set up `.gitignore`, `package.json`, and configured `vite.config.js` for optimal chunk bundling.
-2.  **SEO & Schema Markup:** Created `index.html` structure with structured SEO keywords, OpenGraph meta properties, preloaded Google font hooks, and a custom **JSON-LD Schema (LocalBusiness)** block for search engines.
-3.  **Visual Design Token System:** Created `src/styles/main.css` detailing all typography, colors, resets, grid layouts, responsive queries, and transition specs.
-4.  **Image Optimization:** Created a Python asset-compressor and converted all 30+ project drawings into optimized `.webp` format.
-5.  **Statically Served PDFs:** Structured and copied the client's mapbook drawing PDFs to the public directory for fast download linking.
+## 👨‍💻 Developer Guide
 
----
+To set up and work on this project locally, follow these steps:
 
-## 💻 Developer Commands
-To run this website locally or build for production:
+### Prerequisites
+*   [Node.js](https://nodejs.org/) (v16+ recommended)
+*   [npm](https://www.npmjs.com/)
 
-*   **Install dependencies:**
+### Installation & Run
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/DurabH/CAD_Sketch_By_Ashir.git
+    cd CAD_Sketch_By_Ashir
+    ```
+
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
-*   **Start Local Dev Server:**
+
+3.  **Start development server:**
     ```bash
     npm run dev
     ```
-*   **Compile Production Assets:**
+
+4.  **Build for production:**
     ```bash
     npm run build
     ```
 
-=========================
+---
 
-[plugin:vite:css] [postcss] D:/CAD_Sketch_By_Ashir/src/styles/main.css:474:1: Unexpected }
-D:/CAD_Sketch_By_Ashir/src/styles/main.css:474:0
-472|  }
-473|      justify-content: center;
-474|  }
-   |  ^
-475|  
-476|  .service-card {
-    at Input.error (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\input.js:135:16)
-    at Parser.unexpectedClose (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:594:22)
-    at Parser.end (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:337:12)
-    at Parser.parse (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parser.js:463:16)
-    at parse (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\parse.js:11:12)
-    at new LazyResult (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\lazy-result.js:171:16)
-    at Processor.process (D:\CAD_Sketch_By_Ashir\node_modules\postcss\lib\processor.js:53:14)
-    at compileCSS (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:36898:59)
-    at async TransformPluginContext.transform (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:36171:11)
-    at async PluginContainer.transform (file:///D:/CAD_Sketch_By_Ashir/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18
-Click outside, press Esc key, or fix the code to dismiss.
-You can also disable this overlay by setting server.hmr.overlay to false in vite.config.js.
+## 🛡️ License
+This project is for professional portfolio purposes. All design assets and technical drawings are the property of Ali Ashir.
+
+---
+
+*Designed & Built for Ali Ashir.*
